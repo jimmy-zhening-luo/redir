@@ -8,11 +8,8 @@
     const query = new URLSearchParams(window.location.search),
       topic = query.get("topic");
 
-    void goto(
-      "https://www.example.com/foo?topic="
-        + (topic ?? ""),
-      { external: true },
-    );
+    window.location = "https://www.example.com/foo?topic="
+      + (topic ?? "");
   });
 </script>
 
