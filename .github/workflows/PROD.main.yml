@@ -2,11 +2,14 @@
 name: Azure Deploy (PROD.main)
 on: {push: {branches: [main]} }
 jobs:
-  build:
-    name: Build
+  deploy-prod-main:
+    name: Build/Deploy (PROD.main)
+    environment:
+      name: PROD.main
+      url: https://jim.so
     permissions:
+      id-token: write
       contents: read
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,17 +28,6 @@ jobs:
       - name: Copy Azure SWA Config
         id: config
         run: cp staticwebapp.config.json build
-  deploy-prod-main:
-    name: Deploy (PROD.main)
-    environment:
-      name: PROD.main
-      url: https://jim.so
-    permissions:
-      id-token: write
-      contents: read
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
       - name: Install OIDC Client
         id: authclient
         run: npm i --loglevel=error --fund=false @actions/core@1.11.1 @actions/http-client@3.0.0
