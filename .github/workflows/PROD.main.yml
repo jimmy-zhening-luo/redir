@@ -2,8 +2,8 @@
 name: Azure Deploy (PROD.main)
 on: {push: {branches: [main]} }
 jobs:
-  build-prod-main:
-    name: Build (PROD.main)
+  build:
+    name: Build
     permissions:
       contents: read
     if: github.event_name == 'push'
@@ -25,8 +25,8 @@ jobs:
       - name: Copy Azure SWA Config
         id: config
         run: cp staticwebapp.config.json build
-  build-prod-main:
-    name: Build (PROD.main)
+  deploy-prod-main:
+    name: Deploy (PROD.main)
     environment:
       name: PROD.main
       url: https://jim.so
