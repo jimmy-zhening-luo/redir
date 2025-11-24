@@ -7,8 +7,8 @@
     const query = new URLSearchParams(window.location.search),
       topic = query.get("topic");
 
-    window.location = "https://www.example.com/foo?topic="
-      + (topic ?? "") as typeof window.location;
+    window.location = ("https://www.example.com/foo?topic="
+      + (topic ?? "")) as string & typeof window.location;
   });
 </script>
 
