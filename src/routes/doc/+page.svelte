@@ -1,10 +1,11 @@
 <script
   lang="ts"
 >
-  import type { PageProps } from "./$types.js";
+  import { onMount } from "svelte";
 
-  const { data } = $props() as PageProps,
-    { content } = data as PageProps["data"];
+  onMount(() => {
+    window.location.href = "https://example.com";
+  });
 </script>
 
 <svelte:head>
