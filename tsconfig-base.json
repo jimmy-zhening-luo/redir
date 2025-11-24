@@ -1,6 +1,7 @@
 {
   "display": "tsc@509.6.0",
   "$help": "https://aka.ms/tsconfig/#quick-nav-Top%20Level",
+  "extends": "./dist/tsconfig.json" /* @OVERRIDE */,
   "compilerOptions": {
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -18,8 +19,7 @@
     "moduleResolution": "bundler",
     "rewriteRelativeImportExtensions": true,
     "types": [
-      "mocha",
-      "chai",
+      /* @OVERRIDE */
       /* {CONFIGURE} */
     ],
     "declaration": true,
@@ -27,12 +27,12 @@
     "noEmitOnError": true,
     "removeComments": true,
     "sourceMap": true,
-    // "verbatimModuleSyntax": true,
-    "lib": [
-      "esnext",
-      /* {CONFIGURE} */
-    ],
+    "verbatimModuleSyntax": true /* @OVERRIDE */,
+    // "lib": [
+    //   "esnext",
+    //   /* {CONFIGURE} */
+    // ] /* @OVERRIDE */,
     "target": "esnext",
-    // "skipLibCheck": true,
+    "skipLibCheck": true /* @OVERRIDE */,
   },
 }
