@@ -5,7 +5,7 @@
 
   onMount(() => {
     const query = new URLSearchParams(window.location.search),
-    topic = query.get("topic");
+      topic = query.get("topic");
 
     window.location.href = topic
       ?? "https://example.com";
