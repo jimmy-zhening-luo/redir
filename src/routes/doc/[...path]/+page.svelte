@@ -3,7 +3,7 @@
 >
   import type { PageProps } from "./$types.js";
 
-  const { data } = $props(),
+  const { data } = $props() as PageProps,
     { content } = data as PageProps["data"];
 </script>
 

@@ -1,9 +1,9 @@
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = ({ params }) => {
-  const { source, path } = params;
+  const { path } = params;
 
   return {
-    content: `Source: ${source} :: Path: ${path}`,
+    content: `Path: ${path}`,
   };
 };
