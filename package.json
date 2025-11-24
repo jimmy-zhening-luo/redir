@@ -16,8 +16,6 @@
   },
   "type": "module",
   "devDependencies": {
-    "@fontsource/open-sans": "^5.2.7",
-    "@fontsource/overpass-mono": "^5.2.8",
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.49.0",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",

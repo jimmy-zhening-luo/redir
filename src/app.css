@@ -1,0 +1,14 @@
+@import "./style/index.css";
+
+:root {
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+body {
+  background-attachment: fixed;
+  background-color: var(--color-bg);
+  background-size: 100vi 100vb;
+  min-block-size: 100vb;
+  margin: 0;
+}
