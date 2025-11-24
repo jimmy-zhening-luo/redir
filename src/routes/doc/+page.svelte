@@ -4,7 +4,11 @@
   import { onMount } from "svelte";
 
   onMount(() => {
-    window.location.href = "https://example.com";
+    const query = new URLSearchParams(window.location.search),
+    topic = query.get("topic");
+
+    window.location.href = topic
+      ?? "https://example.com";
   });
 </script>
 
@@ -18,6 +22,6 @@
 
 <section>
   <h1>
-    {content}
+    Redirecting...
   </h1>
 </section>
