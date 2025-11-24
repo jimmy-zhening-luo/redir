@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig-src.json",
+  "include": [
+    "../typings/**/*",
+    "**/*",
+  ],
+  "references": [
+    {
+      "path": "../typings",
+    },
+  ],
+}
