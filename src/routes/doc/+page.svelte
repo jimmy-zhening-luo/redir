@@ -8,7 +8,7 @@
       topic = query.get("topic");
 
     window.location = "https://www.example.com/foo?topic="
-      + (topic ?? "") as string;
+      + (topic ?? "") as typeof window.location;
   });
 </script>
 
