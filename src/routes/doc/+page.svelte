@@ -2,13 +2,17 @@
   lang="ts"
 >
   import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
 
   onMount(() => {
     const query = new URLSearchParams(window.location.search),
       topic = query.get("topic");
 
-    window.location.href = topic
-      ?? "https://example.com";
+    void goto(
+      "https://www.example.com/foo?topic="
+        + (topic ?? ""),
+      { external: true },
+    );
   });
 </script>
 
